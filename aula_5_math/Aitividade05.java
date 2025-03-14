@@ -24,10 +24,10 @@ public class Aitividade05 {
         }
 
         if (jogador1 > jogador2){
-            System.out.println("Jogador1 ganhou de " + jogador1 + " x " + jogador2);
+            System.out.println("Jogador 1 ganhou de " + jogador1 + " x " + jogador2);
         }
         else{
-            System.out.println("Jogador2 ganhou de " + jogador2 + " x " + jogador1);
+            System.out.println("Jogador 2 ganhou de " + jogador2 + " x " + jogador1);
         }
 
 
