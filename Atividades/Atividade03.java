@@ -23,7 +23,7 @@ public class Atividade03 {
             System.out.print("Digite o sexo (M/F) ou 'S' para sair: ");
             sexo = input.next().toUpperCase();
 
-            if (sexo.equals("S")) {
+            if (sexo == "S") {
                 break;
             }
 
@@ -40,12 +40,12 @@ public class Atividade03 {
                 idadeMaisPesada = idade;
             }
 
-            if (sexo.equals("M") && idade < 30) {
+            if (sexo == "M" && idade < 30) {
                 pesoHomens += peso;
                 contHomens++;
             }
 
-            if (sexo.equals("F")) {
+            if (sexo == "F") {
                 totalMulheres++;
                 if (peso < 50) {
                     mulheresAbaixo50kg++;
