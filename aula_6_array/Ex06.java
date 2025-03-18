@@ -6,7 +6,7 @@ public class Ex06 {
     public static void main(String[] args){
     
         for(int i = 0; i < notas.length; i += 1){
-            System.out.print("Digite a " + (i + 1) + " notas: ");
+            System.out.print("Digite a " + (i + 1) + "° notas: ");
             notas[i] = input.nextDouble();
         }
         for(int i = 0; i < notas.length; i += 1){
