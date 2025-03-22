@@ -1,3 +1,4 @@
+package atividadeCasa.Atividade01;
 import java.util.Scanner;
 
 public class Atividade03 {
@@ -62,6 +63,5 @@ public class Atividade03 {
         System.out.printf("Média de peso dos homens com menos de 30 anos: %.2f kg%n", media_p_homens);
         System.out.printf("Percentual de mulheres com menos de 50 kg: %.2f%%%n", percentual_mulheres_abaixo50kg);
 
-        input.close();
     }
 }

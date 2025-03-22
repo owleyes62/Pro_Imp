@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class Ex06 {
+public class Exemplo06 {
     public static Scanner input = new Scanner(System.in);
     public static void main(String[] args) {
         double[] notas = new double[5];

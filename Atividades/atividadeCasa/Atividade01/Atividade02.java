@@ -1,3 +1,4 @@
+package atividadeCasa.Atividade01;
 import java.util.Scanner;
 
 public class Atividade02{
@@ -6,7 +7,7 @@ public class Atividade02{
         double desconto_p;
         int categoria_p, preco_p, quantidade_p, resultado_f;
 
-        System.out.println("Bemvindo a area de descontos, para receber seu desconto porfavor preencha os dados abaixo.");
+        System.out.println("Bemvindo a area de descontos,\n para receber seu desconto porfavor preencha os dados abaixo.");
         System.out.print("preço do produto: ");
         preco_p = input.nextInt();
         System.out.print("categoria do produto, ");
