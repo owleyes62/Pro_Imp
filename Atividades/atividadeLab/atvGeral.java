@@ -1,4 +1,3 @@
-package atividadeLab;
 import java.util.Scanner;
 
 public class atvGeral {
