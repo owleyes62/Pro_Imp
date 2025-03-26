@@ -16,10 +16,21 @@ public class Ex06 {
         buscarNotasEnquantoNotaNaoNegativa(notas);
     }
 
+    public static void inserirOrdenado(double[] v, int pos,  double x){
+        int i = pos;
+        while(i > 0 && v[i-1] > x){
+            v[i] = v[i - 1];
+            i -= 1;
+        }
+        v[i] = x;
+    }
+
     public static void digitacaoNotas(double[] v) {
+        double nota;
         for (int i = 0; i < v.length; i += 1) {
             System.out.print("Digite a " + (i + 1) + "ª nota: ");
-            v[i] = input.nextDouble();
+            nota = input.nextDouble();
+            inserirOrdenado(v, i, nota);
         }
     }
 
