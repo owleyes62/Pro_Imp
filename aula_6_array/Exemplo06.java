@@ -7,6 +7,7 @@ public class Exemplo06 {
         double media;
         digitacaoNotas(notas);
         impressaoNotas(notas);
+        estaOrdenado(notas);
         media = calcularMedia(notas);
         System.out.println("\nA média da turma é " + media);
         System.out.println("\nNotas maior ou igual a média da turma\n");
@@ -16,10 +17,41 @@ public class Exemplo06 {
         buscarNotasEnquantoNotaNaoNegativa(notas);
     }
 
+    public static void inserirOrdenado(double[] v, int pos, double x) {
+        int i = pos;
+        while (i > 0 && v[i - 1] > x) {
+            v[i] = v[i - 1];
+            i -= 1;
+        }
+        v[i] = x;
+    }
+
+    public static boolean estaOrdenado(double[] v){
+        boolean result = true;
+        for (int i = 1; i < v.length; i += 1){
+            if(v[i] < v[i - 1]){
+                result = false;
+                break;
+            }
+        }
+        if (result) {
+            return true;
+        }
+        for (int i = 1; i < v.length; i += 1){
+            if(v[i] > v[i - 1]){
+                result = false;
+                break;
+            }
+        }
+        return true;
+    }
+
     public static void digitacaoNotas(double[] v) {
+        double nota;
         for (int i = 0; i < v.length; i += 1) {
             System.out.print("Digite a " + (i + 1) + "ª nota: ");
-            v[i] = input.nextDouble();
+            nota = input.nextDouble();
+            inserirOrdenado(v, i, nota);
         }
     }
 
