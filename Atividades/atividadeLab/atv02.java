@@ -15,7 +15,7 @@ public class atv02 {
         int i = 0;
 
         while (i < v.length) {
-            int valor = gerador.nextInt(1000) + 1; // Gera de 1 a 1000
+            int valor = gerador.nextInt(1001); 
             boolean repetido = false;
 
             for (int j = 0; j < i; j++) {
