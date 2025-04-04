@@ -8,8 +8,6 @@ public class atv02 {
         gerarSemRepeticao(vetor);
         embaralharVetor(vetor, vetor2);
         exibir(vetor , vetor2);
-        System.out.println();
-        System.out.println("nova lista");
         
         
     }
@@ -44,8 +42,17 @@ public class atv02 {
     }
 
     public static void embaralharVetor(int[] v, int[]v2){
-        for(int i =  0; i < v.length; i += 1){
-            v2[gerador.nextInt(1000) - 1] = v[i];
+        for (int i = 0; i < v.length; i++) {
+            v2[i] = v[i];
+        }
+
+        for (int i = v2.length - 1; i > 0; i--) {
+            int j =gerador.nextInt(i + 1);
+    
+            // Trocando os elementos v2[i] e v2[j]
+            int temp = v2[i];
+            v2[i] = v2[j];
+            v2[j] = temp;
             
         }
     }
