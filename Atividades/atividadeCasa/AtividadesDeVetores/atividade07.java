@@ -6,9 +6,9 @@ public class atividade07 {
     public static void main(String[] args){
         int[] vetor = new int[10];
         System.out.println("Vetor:");
-        maiorMenorValor(vetor);
+        procuraMaiorValor(vetor);
     }
-    public static void maiorMenorValor(int[] v){
+    public static void procuraMaiorValor(int[] v){
         Random gerador = new Random();
         int maior = 0;
         int pos = 0;
