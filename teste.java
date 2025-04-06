@@ -1,16 +1,20 @@
+import java.util.Random;
+
 public class teste {
-    public static void main(String[] args){
-        int [] v ={1, 2, 3, 4, 5, 6};
-        int x = 5;
-        for(int i = 0; i < v.length; i += 1){
-            if (x != v[i]){
-                System.out.println("Adiciona valor");
-            }else{
-                System.out.println("Refaz valor");
-                v[i] = 4;
-                x = 3;
-            }
-            System.out.println(v[i] + ", ");
+    public static void main(String[] args) {
+        int[] vetor = new int[200];
+        int[] frequencia = new int[21]; // índices de 1 a 20
+        Random gerador = new Random();
+
+        // Preencher vetor com números aleatórios de 1 a 20
+        for (int i = 0; i < vetor.length; i++) {
+            vetor[i] = gerador.nextInt(20) + 1;
+            frequencia[vetor[i]]++;
+        }
+
+        System.out.println("Valor | Frequência");
+        for (int i = 1; i <= 20; i++) {
+            System.out.printf("%2d   |    %2d\n", i, frequencia[i]);
         }
     }
     

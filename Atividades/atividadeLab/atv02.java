@@ -1,10 +1,11 @@
 import java.util.Random;
 
 public class atv02 {
+    public static final int tam = 1000;
     public static Random gerador = new Random();
     public static void main(String[] args) {
-        int[] vetor = new int[1000];
-        int[] vetor2 = new int[1000];
+        int[] vetor = new int[tam];
+        int[] vetor2 = new int[tam];
         gerarSemRepeticao(vetor);
         embaralharVetor(vetor, vetor2);
         exibir(vetor , vetor2);
@@ -15,7 +16,7 @@ public class atv02 {
         int i = 0;
 
         while (i < v.length) {
-            int valor = gerador.nextInt(1001); 
+            int valor = gerador.nextInt(tam); 
             boolean repetido = false;
 
             for (int j = 0; j < i; j++) {
@@ -49,7 +50,6 @@ public class atv02 {
         for (int i = v2.length - 1; i > 0; i--) {
             int j =gerador.nextInt(i + 1);
     
-            // Trocando os elementos v2[i] e v2[j]
             int temp = v2[i];
             v2[i] = v2[j];
             v2[j] = temp;
