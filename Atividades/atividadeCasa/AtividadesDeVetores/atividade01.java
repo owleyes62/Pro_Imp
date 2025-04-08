@@ -1,4 +1,4 @@
-import java.util.Scanner;
+1import java.util.Scanner;
 
 public class atividade01 {
     public static Scanner input = new Scanner (System.in);

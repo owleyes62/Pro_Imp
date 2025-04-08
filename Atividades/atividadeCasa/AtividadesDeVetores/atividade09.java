@@ -16,7 +16,7 @@ public class atividade09 {
             int geraNum = gerador.nextInt(20);
             if (geraNum % 2 == 0){
                v[i] = geraNum;
-               System.out.println(v[i] + "par");
+               System.out.println(v[i] + " par");
             }else{
                 v[i] = geraNum + 1;
             }
