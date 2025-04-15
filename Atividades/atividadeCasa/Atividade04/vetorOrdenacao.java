@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-public class VetorOrdenacao {
+public class vetorOrdenacao {
     public static Random gerar = new Random();
     public static Scanner input = new Scanner(System.in);
     public static final int TAM = 10;
