@@ -60,7 +60,9 @@ public class Exemplo08 {
       trocou = false;
       for (int i = 0; i <= fim; i++) {
         if (v[i] > v[i+1]) {
-          chave = v[i]; v[i] = v[i+1]; v[i+1] = chave;
+          chave = v[i];
+          v[i] = v[i+1]; 
+          v[i+1] = chave;
           pos = i; trocou = true;
         }
       }
