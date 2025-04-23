@@ -16,14 +16,14 @@ public class atividade01 {
     public static void somaValores(int[] v){
         for( int i = 0; i < 1; i += 1){
             int t = v.length;
-            int soma = v[0] + v[1] + v[5];
+            int soma = v[0] + v[1] + v[v.length - 1];
             System.out.println("Soma dos valores A[0], A[1], A[5] é: " + soma);
         }
     }
     public static void modificandoValor(int[] v){
         System.out.println("Vertor modificado:");
         for( int i = 0; i < v.length; i += 1){
-            v[4] = 100;
+            v[v.length - 2] = 100;
             System.out.println(v[i]); 
         }
     }
