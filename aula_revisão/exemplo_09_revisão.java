@@ -47,7 +47,7 @@ public class exemplo_09_revisão {
                     System.out.println("A média do vetor é " + calcularMedia(vetor1, qtdVetor1));
                     break;
 
-                    default:
+                default:
                     if (opcao != 0) {
                         System.out.println("Opção Inválida!");
                     }
