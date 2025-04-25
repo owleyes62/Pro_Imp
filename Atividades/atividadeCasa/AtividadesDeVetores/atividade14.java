@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class atividade14 {
-    public static Random gerador = new Random(5);
+    public static Random gerador = new Random();
     public static void main(String[] args){
         int[] vetor = new int[10];
         gerarVetor(vetor);
