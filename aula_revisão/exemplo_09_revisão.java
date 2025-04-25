@@ -69,7 +69,11 @@ public class exemplo_09_revisão {
 
     public static void imprimirVetor(int[] v, int n) {
         for (int i = 0; i < n; i += 1) {
-            System.out.print(v[i] + "\t");
+            if (i == n - 1) {
+                System.out.println(v[i] + "\t");
+            }else{
+                System.out.print(v[i] + ", \t");
+            }
         }
         System.out.println();
     }
