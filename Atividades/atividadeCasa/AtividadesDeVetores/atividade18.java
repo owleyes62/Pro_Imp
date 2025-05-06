@@ -4,7 +4,7 @@ public class atividade18 {
     public static Random gerador = new Random();
     public static void main(String[] args){
         int[] vetor = new int[10];
-        int valor = 5;
+        int valor = 3;
         gerarNum(vetor);
         System.out.println("Vetor original.");
         imprimir(vetor);
@@ -26,9 +26,11 @@ public class atividade18 {
         }
     }
     public static void multiplosX(int[] v, int x){
+        int multiplosX;
         for (int i = 0; i < v.length; i++) {
             if(v[i] % x == 0){
-                
+                multiplosX = v[i];
+                System.out.println("O número " + multiplosX + " é múltiplo de " + x);
             }
         }
     }

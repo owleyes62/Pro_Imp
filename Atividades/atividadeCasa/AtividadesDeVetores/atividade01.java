@@ -1,3 +1,5 @@
+// https://www.facom.ufu.br/~backes/gsi002/ListaC04.pdf
+
 import java.util.Scanner;
 
 public class atividade01 {
