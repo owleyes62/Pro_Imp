@@ -1,7 +1,7 @@
 import java.util.Random;
 
 public class Exemplo08 {
-  public static final int TAM = 100;
+  public static final int TAM = 10;
   public static Random geradorAleat = new Random(5);
 
   public static void main(String[] args) {
@@ -73,7 +73,7 @@ public class Exemplo08 {
   public static void imprimir(double[] v) {
     for (int i = 0; i < v.length; i += 1) {
       System.out.printf("%6.2f ", v[i]);
-      if ((i + 1) % 20 == 0) {
+      if ((i + 1) % 10 == 0) {
         System.out.println();
       }
     }

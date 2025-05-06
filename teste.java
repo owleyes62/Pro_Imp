@@ -1,13 +1,13 @@
 import java.util.Random;
 
 public class teste {
-    public static Random gerador = new Random(5);
+    public static Random gerador = new Random();
     public static void main(String[] args) {
-        int[] vetor = new int[10];
+        int[] vetor = new int[5];
         gerarVetor(vetor);
-        imprimirVetor(vetor);
-        System.out.println();
-        insercaoDireta(vetor, vetor.length);
+        for(int i = 0; i < vetor.length; i++){
+            System.out.print(vetor[vetor.length - 2]);
+        }
         System.out.println();
         imprimirVetor(vetor);
     }
