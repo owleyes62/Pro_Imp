@@ -1,17 +1,23 @@
 import java.util.Random;
 
 public class atv03ReverterMetade {
-    public static Random gerador = new Random(2);
+    public static Random gerador = new Random();
     public static void main(String[] args){
-        int[] vetor = {1, 1, 2, 3, 5, 7};
+        
+        int[] vetor = {8, 13, 21, 34, 55, 8};
+        int qtdVetor = vetor.length;
         imprimir(vetor);
         System.out.println();
         System.out.println("Vetor verificado");
-        verificaFibo(vetor);
+        verificarFibo(vetor);
         imprimir(vetor);
         System.out.println();
         System.out.println("Vetor invertido");
         reverteVetor(vetor);
+        imprimir(vetor);
+        System.out.println();
+        System.out.println("Vetor invertido verificado");
+        verificarFibo(vetor);
         imprimir(vetor);
     }
     public static void gerarVetor(int[] v ){
@@ -33,35 +39,15 @@ public class atv03ReverterMetade {
         int meio = v.length / 2;
         int fim = v.length - 1;
         int aux;
-        for(int i = 0; i < v.length; i++){
-            if(i < meio){
+        for(int i = 0; i < meio; i++){
             aux = v[fim - i];
             v[fim - i] = v[i];
             v[i] = aux;
-            }
         }
     }
-    public static void verificaFibo(int[] v){
-        int soma, qtdSoma = 0;
-        int totalSoma = v.length - 2;
-        boolean fibo = false;
-        for(int i = 2; i < v.length; i++) {
-            soma = v[i - 2] + v[i - 1];
-            if(soma == v[i]){
-                fibo = true;
-                qtdSoma += 1;
-            }
-        }
-        if(fibo){
-            System.out.println("Existe fibonacci no codigo.");
-            if(qtdSoma == totalSoma){
-                System.out.println("Todo o vetor esta em fibo");
-            }else{
-                System.out.println("Mas não em todo vetor");
-            }
-        }else{
-            System.out.println("Não existe fibonacci");
-        }
+    public static void verificarFibo(int[] v){
+       
+        
     }
 
 
