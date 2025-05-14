@@ -1,8 +1,6 @@
-import java.util.Scanner;
 import java.util.Random;
 
 public class atividade05 {
-    public static Scanner input = new Scanner(System.in);
     public static void main(String[] args){
         int[] vetor = new int[10];
         valoresPares(vetor);

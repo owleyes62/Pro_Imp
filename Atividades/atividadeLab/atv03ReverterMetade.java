@@ -47,7 +47,6 @@ public class atv03ReverterMetade {
     }
     public static void verificarFibo(int[] v){
        
-        
     }
 
 
