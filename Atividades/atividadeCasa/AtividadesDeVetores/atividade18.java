@@ -26,11 +26,9 @@ public class atividade18 {
         }
     }
     public static void multiplosX(int[] v, int x){
-        int multiplosX;
         for (int i = 0; i < v.length; i++) {
             if(v[i] % x == 0){
-                multiplosX = v[i];
-                System.out.println("O número " + multiplosX + " é múltiplo de " + x);
+                System.out.println("O número " + v[i] + " é múltiplo de " + x);
             }
         }
     }
