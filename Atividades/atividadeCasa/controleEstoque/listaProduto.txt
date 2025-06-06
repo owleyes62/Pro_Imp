@@ -1,0 +1,70 @@
+Arroz 
+branco 
+comida 
+5.6 
+100 
+10 
+1 
+Feijão 
+preto 
+comida 
+7.5 
+80 
+10 
+1 
+Detergente 
+líquido neutro 
+limpeza 
+3.2 
+50 
+5 
+1 
+Camisa 
+algodão manga curta 
+roupas 
+25.0 
+30 
+8 
+1 
+Celular 
+smartphone 64GB 
+eletrônico 
+999.9 
+15 
+5 
+1 
+Caderno 
+espiral 200 folhas 
+papelaria 
+12.0 
+60 
+10 
+1 
+Leite 
+integral 1L 
+comida 
+4.5 
+90 
+15 
+1 
+Sabão 
+em pó 1kg 
+limpeza 
+8.7 
+40 
+5 
+1 
+Bola 
+futebol tamanho oficial 
+brinquedos 
+35.0 
+25 
+6 
+1 
+Macarrão 
+espaguete grano duro 
+comida 
+4.2 
+70 
+10 
+0 
