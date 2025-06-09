@@ -14,6 +14,8 @@ public class MenuEstoque {
             System.out.println("3. Filtra por categoria");
             System.out.println("4. Ordenar produtos");
             System.out.println("5. Remover/recuperar produto");
+            System.out.println("6. atualizar preço");
+            System.out.println("7. quatidade de estoque por categoria");
             System.out.print("Digite sua opção (0 p/ sair): ");
             opcao = input.nextInt();
             
@@ -52,15 +54,17 @@ public class MenuEstoque {
                     imprimirProdutos(listaProdutos, qtdlistaProdutos);
                     break;
 
-                // case 6:
-                //     // atualizar preço
-                //     System.out.println("A média do vetor é " + calcularMedia(listaProdutos, qtdlistaProdutos));
-                //     break;
+                case 6:
+                    // atualizar preço
+                    input.nextLine();
+                    atualizarPreco(listaProdutos, qtdlistaProdutos);
+                    break;
 
-                // case 7:
-                //     // valor em estoque por categoria
-                //     System.out.println("A média do vetor é " + calcularMedia(listaProdutos, qtdlistaProdutos));
-                //     break;
+                case 7:
+                    // valor em estoque por categoria
+                    input.nextLine();
+                    quatidadeEstoquePorCategoria(listaProdutos, qtdlistaProdutos);
+                    break;
 
                 default:
                     if (opcao != 0) {
@@ -260,6 +264,75 @@ public class MenuEstoque {
       
     }
 
+    public static void atualizarPreco(Produto[] vp, int tam){
+      int opcao = 1, cont = 0;
+      System.out.println("Lista de produtos atualizaveis");
+      for (int i = 0; i < tam; i++) {
+        System.out.printf((cont += 1) + " (%s, %.2f)\n", vp[i].nome, vp[i].preco);
+      }
+      System.out.println();
+      while (opcao == 1) {
+        System.out.print("Escolha um Produto para atualizar o preço: ");
+        String produtoNome = input.nextLine();
+        System.out.println();
+        System.out.print("Escolha o novo preço: ");
+        double novoPreco = input.nextDouble();
+        if(buscaProduto(vp, tam, produtoNome) == -1){
+          System.out.println("Não exite esse produto");
+        }else{
+          for(int i = 0; i < tam ; i++) {
+            if (produtoNome.toUpperCase().equalsIgnoreCase(vp[i].nome.toUpperCase())) {
+              vp[i].preco = novoPreco;
+              System.out.println("Produto atualizado");
+              System.out.println();
+              System.out.printf("(%s, %s, %s, R$ %.2f, %d unidades, %d unidades minimas)\n",
+              vp[i].nome, vp[i].descricao, vp[i].categoria,  vp[i].preco, vp[i].qtdEstoque, vp[i].qtdMinima);  
+            }
+          } 
+        }
+
+      System.out.println();
+      System.out.print("Gostaria de atualizar mais algum preço? digite [1]: ");
+      opcao = input.nextInt();
+      input.nextLine();
+      }
+    }  
+
+    public static void quatidadeEstoquePorCategoria(Produto[] vp, int tam){
+      System.out.println("lista de categorias:");
+      System.out.println();
+      int cont = 0, qtdCat = 0, opcao = 1, qtdEstoque = 0;
+      String[] listaCat = new String[TAM]; 
+      listaCat[qtdCat] = vp[0].categoria;
+      qtdCat += 1;
+      for (int i = 0; i < tam; i += 1) {
+        if(busca(listaCat, qtdCat, vp[i].categoria) == -1){
+          listaCat[qtdCat] = vp[i].categoria;
+          qtdCat += 1;
+        }
+      }
+      
+      for (int i = 0; i < qtdCat; i++) {
+        System.out.printf((cont += 1) + " (%s)\n", listaCat[i]);
+      }
+      System.out.println();
+      while (opcao == 1) {
+        System.out.print("Escolha uma das categorias: ");
+        String categoria = input.nextLine();
+        System.out.println(); 
+        for(int i = 0; i < tam ; i++) {
+            if (categoria.toUpperCase().equalsIgnoreCase(vp[i].categoria.toUpperCase())) {
+              qtdEstoque += vp[i].qtdEstoque;
+            }
+        }
+
+        System.out.println("Essa é a quatidade em estoque da categoria " + categoria + ": " + qtdEstoque);
+        System.out.println();
+        System.out.print("Gostaria de ver mais alguma categoria? digite [1]: ");
+        opcao = input.nextInt();
+        input.nextLine();
+      }
+    }
      // public static int buscaBinariaPorCategoria(String[] v, int tam, String x) {
     //   int inicio = 0, fim = tam - 1, meio;
     //   while (inicio <= fim) {
